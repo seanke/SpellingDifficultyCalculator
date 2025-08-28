@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import './App.css'
+import { Container, Typography, TextField, Button, Box } from '@mui/material'
+import SpellcheckIcon from '@mui/icons-material/Spellcheck'
 
 function App() {
   const [word, setWord] = useState('')
@@ -17,18 +18,30 @@ function App() {
   }
 
   return (
-    <>
-      <h1>Spelling Difficulty Calculator</h1>
-      <form onSubmit={handleSubmit}>
-        <input
+    <Container maxWidth="sm" sx={{ mt: 4, textAlign: 'center' }}>
+      <Typography variant="h4" component="h1" gutterBottom>
+        Spelling Difficulty Calculator
+      </Typography>
+      <Box
+        component="form"
+        onSubmit={handleSubmit}
+        sx={{ display: 'flex', gap: 2, justifyContent: 'center', mt: 2 }}
+      >
+        <TextField
+          label="Enter a word"
           value={word}
           onChange={(e) => setWord(e.target.value)}
-          placeholder="Enter a word"
         />
-        <button type="submit">Calculate</button>
-      </form>
-      {score !== null && <p>Difficulty score: {score}</p>}
-    </>
+        <Button variant="contained" type="submit" endIcon={<SpellcheckIcon />}>
+          Calculate
+        </Button>
+      </Box>
+      {score !== null && (
+        <Typography variant="h6" sx={{ mt: 3 }}>
+          Difficulty score: {score}
+        </Typography>
+      )}
+    </Container>
   )
 }
 
