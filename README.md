@@ -1,6 +1,8 @@
 # Spelling Difficulty Calculator
 
-A simple React app built with [Vite](https://vitejs.dev/) that estimates the difficulty of spelling a word.
+A simple React app built with [Vite](https://vitejs.dev/) that estimates the difficulty of spelling a word. This little experiment tries to rate how challenging a word is to spell.
+
+Check out the live demo on GitHub Pages: [https://<your-username>.github.io/SpellingDifficultyCalculator/](https://<your-username>.github.io/SpellingDifficultyCalculator/).
 
 ## Development
 
@@ -13,4 +15,4 @@ npm run dev
 
 ## Deployment
 
-Changes pushed to `main` are built and published to GitHub Pages via a GitHub Actions workflow. Enable GitHub Pages in the repository settings with the **GitHub Actions** source.
+Changes pushed to `main` are built and published to GitHub Pages via a GitHub Actions workflow.
